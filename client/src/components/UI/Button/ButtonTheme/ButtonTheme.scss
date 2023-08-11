@@ -1,0 +1,46 @@
+.btn-theme {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 150ms ease-in-out;
+
+  svg {
+    stroke: var(--color);
+  }
+
+  &:hover {
+    svg {
+      transition: all 150ms ease-in-out;
+      fill: #03a9f4;
+
+      path {
+        transition: all 150ms ease-in-out;
+        fill: #03a9f4;
+      }
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.active {
+  background-color: var(--bg);
+  position: relative;
+}
+
+.light svg {
+  transition: all 150ms ease-in-out;
+  fill: var(--color);
+}
+
+.dark svg path {
+  transition: all 150ms ease-in-out;
+  fill: var(--color);
+}

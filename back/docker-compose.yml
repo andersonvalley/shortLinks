@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - app_network
+
+  node_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1001:1001"
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/links?schema=public
+
+networks:
+  app_network:
+

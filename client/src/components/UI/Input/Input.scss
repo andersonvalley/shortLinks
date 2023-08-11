@@ -1,0 +1,39 @@
+.label {
+  color: var(--color);
+  width: 100%;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  border: 1px solid transparent;
+  font-size: 1.8rem;
+  height: 50px;
+  padding: 7px 16px;
+  border-radius: 8px;
+  outline: none;
+  background-color: var(--bg-btn-auth);
+  color: var(--color);
+  font-family: 'Montserrat', serif;
+  appearance: none;
+  transition: all 200ms ease-in-out;
+  cursor: text;
+
+  &:hover {
+    background-color: var(--bg-btn-auth-hover);
+  }
+
+  &:focus {
+    border-color: #03a8f45b;
+    box-shadow: 0 0 0 4px #03a8f417;
+    background-color: var(--bg-btn-auth);
+  }
+
+  &::placeholder {
+    vertical-align: middle;
+    position: relative;
+    top: 2px;
+    font-size: 2rem;
+  }
+}
